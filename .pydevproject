@@ -5,5 +5,6 @@
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/${PROJECT_DIR_NAME}/Algorithm</path>
 <path>/${PROJECT_DIR_NAME}/juzi_it</path>
+<path>/${PROJECT_DIR_NAME}/userful</path>
 </pydev_pathproperty>
 </pydev_project>
