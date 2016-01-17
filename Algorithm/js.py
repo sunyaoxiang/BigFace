@@ -1,7 +1,6 @@
+# -*- coding: utf-8 -*-
 '''
-Created on 2016年1月17日
-
-@author: lenovo
+知乎上的，只能用Python2.7,3.0不支持xrange！
 '''
 
 def d(n):
