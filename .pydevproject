@@ -5,6 +5,11 @@
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/${PROJECT_DIR_NAME}/Algorithm</path>
 <path>/${PROJECT_DIR_NAME}/juzi_it</path>
-<path>/${PROJECT_DIR_NAME}/userful</path>
+<path>/${PROJECT_DIR_NAME}/scrapy-try/itzhaopin</path>
+<path>/${PROJECT_DIR_NAME}/Algorithm/userful</path>
+<path>/${PROJECT_DIR_NAME}/scrapy_zhihu</path>
+<path>/${PROJECT_DIR_NAME}/zhangying_test</path>
+<path>/${PROJECT_DIR_NAME}/lianxi</path>
+<path>/${PROJECT_DIR_NAME}/IP_test</path>
 </pydev_pathproperty>
 </pydev_project>

